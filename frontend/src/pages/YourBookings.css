@@ -1,0 +1,87 @@
+/* MAIN CONTAINER */
+.yb-container {
+  padding-top: 110px;   /* 🔥 fixes navbar overlap */
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TITLE */
+.yb-title {
+  font-size: 32px;
+  font-weight: bold;
+
+  padding: 12px 30px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.2);
+
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.yb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.yb-card {
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+  transition: 0.3s;
+}
+
+.yb-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* TITLE INSIDE CARD */
+.yb-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* DETAILS */
+.yb-detail {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+/* ICON STYLE (optional nice touch) */
+.yb-icon {
+  margin-right: 8px;
+}
+
+/* STATUS */
+.yb-status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.yb-back-btn {
+position: fixed;        
+  bottom: 20px;          
+  left: 20px;             
+
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+
+  background: #6a0dad;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  z-index: 1000;    
+}

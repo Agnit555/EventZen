@@ -1,0 +1,173 @@
+/* PAGE BACKGROUND */
+/* body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f9c5d1, #e0c3fc);
+} */
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;   /* 🔥 reduce padding (important) */
+
+  background: linear-gradient(90deg, #530d94, #3f0311);
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+
+  z-index: 1000;
+  box-sizing: border-box;   /* 🔥 IMPORTANT */
+}
+
+/* BRAND INSIDE NAVBAR */
+.brand {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: "Oswald", sans-serif;
+  color: #F9F6C4;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 8px rgba(106, 13, 173, 0.3);
+}
+
+.welcome {
+  font-size: 16px;
+
+  /* CRITICAL FIX */
+  max-width: 40%;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #e6d5c3;
+  text-align: right;
+}
+
+/* DASHBOARD CONTENT */
+.dashboard-container {
+  padding-top: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything */
+  text-align: center;
+  width: 100%;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: bold;
+
+  padding: 15px 40px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+  box-shadow: 0 8px 20px rgba(133, 47, 133, 0.2);
+
+  margin-bottom: 30px;
+}
+
+.panel-title {
+  display: inline-block;
+
+  padding: 12px 30px;
+  margin-bottom: 25px;
+
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1); /* transparent glass */
+  backdrop-filter: blur(10px);
+
+  color: #000;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+/* CARD GRID */
+.dashboard-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* CARD STYLE */
+.dashboard-card {
+  width: 100%;
+  /* max-width: 320px; */
+  height: 120px;
+
+  border-radius: 15px;
+  background: #e6d5c3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 10px 25px rgba(128, 0, 128, 0.2);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+}
+
+.dash-logout-btn {
+  position: fixed;
+  top: 80px; /* below navbar */
+  right: 20px;
+
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+
+  background: crimson;
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.dash-logout-btn:hover {
+  background: darkred;
+}
+
+/* USER - FUNKY STYLE */
+.dash-user-slogan {
+  text-align: center;
+  margin: 20px 0 30px;
+
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 45px;
+
+  color: #6a0dad;
+}
+
+/* ADMIN - FORMAL STYLE */
+.dash-admin-slogan {
+  text-align: center;
+  margin: 20px 0 30px;
+
+  font-family: 'Georgia', serif;
+  font-size: 35px;
+
+  color: #333;
+}

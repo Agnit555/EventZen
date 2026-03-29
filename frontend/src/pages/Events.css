@@ -1,0 +1,120 @@
+/* PAGE */
+.event-container {
+  padding-top: 110px;   /* 🔥 prevents navbar overlap */
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* TITLE */
+.event-title {
+  font-size: 32px;
+  font-weight: bold;
+
+  padding: 12px 30px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.2);
+
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* FORM BOX */
+.event-form {
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.event-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+}
+
+/* BUTTONS */
+.event-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.event-btn-primary {
+  background: #6a0dad;
+  color: white;
+}
+
+.event-btn-danger {
+  background: #d90429;
+  color: white;
+}
+
+.event-btn-secondary {
+  background: #555;
+  color: white;
+}
+
+/* EVENT LIST */
+.event-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* EVENT CARD */
+.event-card {
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+  transition: 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+}
+
+/* TEXT */
+.event-card h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.event-card p {
+  margin: 8px 0 12px;
+}
+
+/* BUTTON GROUP */
+.event-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.event-back-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+
+  background: #6a0dad;
+  color: white;
+
+  cursor: pointer;
+  z-index: 1000;
+}

@@ -1,0 +1,128 @@
+/* MAIN CONTAINER */
+.budget-container {
+  padding-top: 110px;   /* 🔥 fixes navbar overlap */
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TITLE */
+.budget-title {
+  font-size: 32px;
+  font-weight: bold;
+
+  padding: 12px 30px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.2);
+
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* FORM BOX */
+.budget-form {
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+/* INPUTS */
+.budget-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  background: #ffffffcc;
+}
+
+/* SELECT */
+.budget-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #ffffffcc;
+}
+
+/* BUTTON */
+.budget-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+
+  background: #6a0dad;
+  color: white;
+
+  transition: 0.3s;
+}
+
+.budget-btn:hover {
+  background: #4b0082;
+}
+
+/* TABLE BOX */
+.budget-table-box {
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+}
+
+/* TABLE */
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.budget-table th,
+.budget-table td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: center;
+}
+
+.budget-table th {
+  background: #ddd;
+}
+
+.budget-empty {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.budget-back-btn {
+position: fixed;        
+  bottom: 20px;          
+  left: 20px;             
+
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+
+  background: #6a0dad;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  z-index: 1000;    
+}
