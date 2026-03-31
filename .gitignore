@@ -5,3 +5,10 @@ dist/
 build/
 .vscode/
 *.log
+
+
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
