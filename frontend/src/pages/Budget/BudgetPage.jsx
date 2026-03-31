@@ -19,19 +19,19 @@ export default function BudgetPage() {
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
 
-  // ✅ FETCH EVENTS
+  //  FETCH EVENTS
   useEffect(() => {
     API.get("/api/budget/events")
       .then(res => setEvents(res.data))
       .catch(err => console.error(err));
   }, []);
 
-  // ✅ HANDLE INPUT CHANGE
+  //  HANDLE INPUT CHANGE
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // ✅ SELECT EVENT
+  //  SELECT EVENT
   const handleEventChange = async (e) => {
     const selected = events.find(ev => ev.id === Number(e.target.value));
     if (!selected) return;
@@ -55,7 +55,7 @@ export default function BudgetPage() {
 
     try {
       const res = await API.get(`/api/budget/${selected.id}`);
-      console.log("API RESPONSE:", res.data); // 🔥 DEBUG
+      console.log("API RESPONSE:", res.data); 
 
       if (res.data) {
         const data = res.data;
@@ -63,7 +63,7 @@ export default function BudgetPage() {
         setSaved(true);
         setSavedData(data);
 
-        // ✅ SAFE MAPPING (handles casing issues)
+        // SAFE MAPPING (handles casing issues)
         setForm({
           eventId: data.eventId || data.eventid || "",
           eventName: data.eventName || data.eventname || "",
@@ -78,7 +78,7 @@ export default function BudgetPage() {
     }
   };
 
-  // ✅ SUBMIT (CREATE + UPDATE)
+  // SUBMIT (CREATE + UPDATE)
   const handleSubmit = async () => {
     try {
       const payload = {
@@ -103,7 +103,7 @@ export default function BudgetPage() {
     }
   };
 
-  // ✅ SAFE CALCULATIONS (handles both cases)
+  //  SAFE CALCULATIONS (handles both cases)
   const v = Number(savedData?.venueCost ?? savedData?.venuecost ?? 0);
   const f = Number(savedData?.foodCost ?? savedData?.foodcost ?? 0);
   const l = Number(savedData?.logisticsCost ?? savedData?.logisticscost ?? 0);
@@ -135,7 +135,7 @@ export default function BudgetPage() {
             ))}
           </select>
 
-          {/* ✅ FIXED CONTROLLED INPUTS */}
+          {/* FIXED CONTROLLED INPUTS */}
           <input
             className="budget-input"
             name="totalBudget"
