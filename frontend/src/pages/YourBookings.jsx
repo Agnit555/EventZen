@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function YourBookings() {
 
-  const navigate = useNavigate();  // ✅ MOVE HERE
+  const navigate = useNavigate();  
 
   const [bookings, setBookings] = useState([]);
 
@@ -50,7 +50,7 @@ export default function YourBookings() {
       </div>
 
       <button
-        className="yb-back-btn"  // 🔥 use your fixed button class
+        className="yb-back-btn"  
         onClick={() => navigate("/dashboard")}
       >
         ← Back to Dashboard
