@@ -14,12 +14,12 @@ const SECRET = "mysecretkey";
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "eventdb", // create this DB
+  database: "eventdb", 
   password: "@gnitP8081",
   port: 5433,
 });
 
-// 🔹 REGISTER
+// REGISTER
 app.post("/register", async (req, res) => {
   const { username, email, password, role, adminKey } = req.body;
 
@@ -55,12 +55,12 @@ app.post("/register", async (req, res) => {
     res.status(201).json({ message: "Registered successfully" });
 
   } catch (err) {
-    console.error("REGISTER ERROR:", err); // 🔥 VERY IMPORTANT
+    console.error("REGISTER ERROR:", err); 
     res.status(500).json({ error: err.message });
   }
 });
 
-// 🔹 LOGIN
+// LOGIN
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -85,7 +85,7 @@ app.post("/login", async (req, res) => {
     const token = jwt.sign(
       {
         userId: user.id,
-        username: user.username, // ✅ ADD THIS
+        username: user.username, 
         email: user.email,
         role: user.role,
       },
