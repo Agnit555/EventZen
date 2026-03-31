@@ -11,21 +11,21 @@ export default function Attendee() {
   const [selectedEventTitle, setSelectedEventTitle] = useState("");
   const navigate = useNavigate();
 
-  // 🔹 Load Events
+  //  Load Events
   useEffect(() => {
     API.get("/api/attendee/events")
       .then(res => setEvents(res.data))
       .catch(err => console.error("Error loading events:", err));
   }, []);
 
-  // 🔹 Load Attendees
+  //  Load Attendees
     const loadAttendees = async (eventId) => {
         try {
-            console.log("CLICKED EVENT:", eventId); // 👈 ADD THIS
+            console.log("CLICKED EVENT:", eventId); 
 
             const res = await API.get(`http://localhost:7200/event/${eventId}`);
 
-            console.log("ATTENDEES:", res.data); // 👈 ADD THIS
+            console.log("ATTENDEES:", res.data); 
 
             setAttendees(res.data);
             setSelectedEvent(eventId);
@@ -34,7 +34,7 @@ export default function Attendee() {
         }
     };
 
-  // 🔹 Update Status
+  // Update Status
   const updateStatus = async (bookingId, status) => {
     try {
       await API.put(`/api/attendee/status/${bookingId}`, { status });
@@ -94,10 +94,10 @@ export default function Attendee() {
               : "Attendees"}
 
             {attendees.length === 0 ? (
-              /* ✅ EMPTY STATE */
+              /*  EMPTY STATE */
               <p className="atn-empty">No one registered yet 😕</p>
             ) : (
-              /* ✅ NORMAL LIST */
+              /*  NORMAL LIST */
               attendees.map(a => (
                 <div key={a.bookingId} className="atn-user">
 
