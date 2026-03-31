@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 
-console.log("🔥 FILE STARTED");
+console.log(" FILE STARTED");
 
 app.use(cors({
   origin: "http://localhost:3000",
@@ -66,7 +66,7 @@ app.use("/api/attendee", createProxyMiddleware({
     "^/api/attendee": "",
   },
 
-  // 🔥 ADD THIS
+ 
   onProxyReq: (proxyReq, req, res) => {
     if (req.headers.authorization) {
       proxyReq.setHeader("Authorization", req.headers.authorization);
