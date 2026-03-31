@@ -21,7 +21,7 @@ namespace BudgetService.Controllers
             return new NpgsqlConnection(_config.GetConnectionString("DefaultConnection"));
         }
 
-        // ✅ CREATE / SAVE BUDGET (UPSERT)
+        // CREATE / SAVE BUDGET (UPSERT)
         [HttpPost]
         public async Task<IActionResult> CreateExpense([FromBody] Expense expense)
         {
@@ -53,7 +53,7 @@ namespace BudgetService.Controllers
             return Ok(new { message = "Budget saved successfully" });
         }
 
-        // ✅ GET ALL (WITH CLEAN FIELD NAMES)
+        
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -75,7 +75,7 @@ namespace BudgetService.Controllers
             return Ok(data);
         }
 
-        // ✅ GET EVENTS FROM EVENT SERVICE
+        
         [HttpGet("events")]
         public async Task<IActionResult> GetEvents()
         {
