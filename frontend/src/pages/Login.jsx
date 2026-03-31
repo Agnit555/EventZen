@@ -4,7 +4,7 @@ import API from "../services/api";
 import "./Login.css";
 
 export default function Login() {
-  const [mode, setMode] = useState(null); // 🔥 NEW
+  const [mode, setMode] = useState(null); 
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +15,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  // ✅ REGISTER
+  //  REGISTER
   const register = async () => {
     try {
       await API.post("/api/auth/register", {
@@ -27,14 +27,14 @@ export default function Login() {
       });
 
       alert("Registered Successfully");
-      setMode("login"); // 🔥 auto switch to login
+      setMode("login"); // auto switch to login
     } catch (err) {
       console.error(err);
       alert(err.response?.data?.message || "Register Failed");
     }
   };
 
-  // ✅ LOGIN
+  //  LOGIN
   const login = async () => {
     try {
       const res = await API.post("/api/auth/login", {
@@ -78,7 +78,7 @@ export default function Login() {
           </div>
         )}
 
-        {/* 🔥 LOGIN FORM */}
+        {/*  LOGIN FORM */}
         {mode === "login" && (
           <div className="login-card">
             <h2>Login</h2>
@@ -104,7 +104,7 @@ export default function Login() {
           </div>
         )}
 
-        {/* 🔥 REGISTER FORM */}
+        {/*  REGISTER FORM */}
         {mode === "register" && (
           <div className="login-card">
             <h2>Register</h2>
@@ -145,7 +145,7 @@ export default function Login() {
               </select>
             </div>
 
-            {/* 🔥 ADMIN KEY */}
+            {/*  ADMIN KEY */}
             {role === "ADMIN" && (
               <div className="form-group">
                 <input
@@ -161,7 +161,7 @@ export default function Login() {
           </div>
         )}
 
-        {/* 🔥 BACK BUTTON */}
+        {/*  BACK BUTTON */}
         {mode && (
           <button className="back-auth" onClick={() => setMode(null)}>
             ← Back
