@@ -38,7 +38,7 @@ export default function EventPage() {
   };
 
   const deleteEvent = async (id) => {
-    console.log("Deleting ID:", id); // 🔥 ADD
+    console.log("Deleting ID:", id); 
 
     try {
       await API.delete(`/api/events/${id}`);
@@ -50,7 +50,7 @@ export default function EventPage() {
   };
 
   const updateEvent = async () => {
-    console.log("Updating ID:", editId); // 🔥 ADD
+    console.log("Updating ID:", editId);
 
     try {
       await API.put(`/api/events/${editId}`, {
